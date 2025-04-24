@@ -4,7 +4,7 @@ This FastAPI application uses [Julep AI](https://www.julep.ai/) to power a writi
 
 ---
 
-## 🚀 Features
+## Features
 
 - Initializes a Julep AI agent and task on app startup  
 - Accepts research topics and response formats via a POST endpoint  
@@ -13,7 +13,7 @@ This FastAPI application uses [Julep AI](https://www.julep.ai/) to power a writi
 
 ---
 
-## 📦 Project Structure
+## Project Structure
 
 ```
 project/
@@ -36,7 +36,7 @@ project/
 
 ---
 
-## 📥 Installation
+## Installation
 
 1. **Clone the repository**
 
@@ -83,7 +83,7 @@ Your API will be live at http://127.0.0.1:8000
 
 ---
 
-## 📬 Sample Request
+## Sample Request
 
 Send a POST request to `/research` with the following body:
 
@@ -94,7 +94,7 @@ Send a POST request to `/research` with the following body:
 }
 ```
 
-## 🧪 Try it with curl
+## Try it with curl
 
 ```bash
 curl -X POST http://127.0.0.1:8000/research \
