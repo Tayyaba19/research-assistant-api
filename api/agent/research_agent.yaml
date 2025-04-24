@@ -1,0 +1,25 @@
+name: Research Agent
+description: A research assistant that can search on llm and provide response in the specific format
+
+input_schema:
+  type: object
+  properties:
+    topic:
+      type: string
+      description: The main topic to research
+    response_format:
+      type: string
+      description: The format of the response
+
+
+main:
+  - prompt:
+      - role: system
+        content: |-
+          $ f"""
+          You are a knowledgeable and efficient research assistant. given a topic: {steps[0].input.topic}., your task is to provide clear, concise, and accurate information, focusing only on the most relevant and essential details. Aim to be helpful, precise, and avoid unnecessary elaboration.
+          alwasy return the response in the following format: {steps[0].input.response_format}. Be clear, concise, and match the tone of a professional writer. If the format is 'bullet points', limit to 5 key ideas. If the format is 'summary', keep it under 4 sentences.If the format is 'report', write around 150 words."
+          """
+
+  - evaluate:
+      search_results: $ _
